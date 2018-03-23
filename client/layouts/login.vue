@@ -1,11 +1,5 @@
 <template>
-  <div class="container">
-    test---
-    <a class="btn btn-danger" href="#">test</a>
-    <nuxt/>
-    ---
-    <layout-footer/>
-  </div>
+  <nuxt/>
 </template>
 
 <script>
