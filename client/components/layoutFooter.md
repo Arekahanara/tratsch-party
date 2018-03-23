@@ -1,0 +1,3 @@
+```js
+<layout-footer/>
+```

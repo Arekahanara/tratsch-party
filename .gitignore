@@ -1,0 +1,30 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# Backpack build
+build
+
+coverage
+.nyc_output
+.idea
+
+# Editors
+.idea
+.vscode
+
+#Others
+
+test/data/
+data/
+tmp/
+.nyc_output
+.nuxt
