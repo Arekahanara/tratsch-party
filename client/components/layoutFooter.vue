@@ -1,10 +1,12 @@
 <template>
-  <p>Ich bin ein Geiler Footer</p>
+  <p>Ich bin ein Geiler LEEX</p>
 </template>
 
 <style lang="scss" scoped>
+  p {
+    color: red;
+  }
 </style>
-
 
 <script>
   export default {
