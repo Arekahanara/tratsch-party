@@ -1,21 +1,23 @@
+// Initializes the `category` service on path `/category`
 const createService = require('feathers-mongoose')
-const createModel = require('../../models/user.model')
-const hooks = require('./user.hooks')
+const createModel = require('../../models/category.model')
+const hooks = require('./category.hooks')
 
 module.exports = function (app) {
   const Model = createModel(app)
   const paginate = app.get('paginate')
 
   const options = {
-    name: 'user',
+    name: 'category',
     Model,
     paginate
   }
 
   // Initialize our service with any options it requires
-  app.use('/user', createService(options))
+  app.use('/category', createService(options))
 
   // Get our initialized service so that we can register hooks and filters
-  const service = app.service('user')
-  service.hooks(hooks(app))
+  const service = app.service('category')
+
+  service.hooks(hooks)
 }

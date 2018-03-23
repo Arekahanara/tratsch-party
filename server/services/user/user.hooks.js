@@ -14,7 +14,7 @@ module.exports = function (app) {
     },
 
     after: {
-      all: [ 
+      all: [
         // Make sure the password field is never sent to the client
         // Always must be the last hook
         protect('password')
