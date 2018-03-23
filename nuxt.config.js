@@ -3,11 +3,12 @@ const BabiliPlugin = require('babili-webpack-plugin')
 module.exports = {
   srcDir: 'client/',
   router: {
-    middleware: ['auth']
+    middleware: ['auth','resolveChannel']
   },
   plugins: [
     { src: '~/plugins/nuxt-client-init.js', ssr: false },
-    { src: '~/plugins/moment.js' }
+    { src: '~/plugins/moment.js' },
+    { src: '~/plugins/vuex-router-sync.js' }
   ],
   /*
   ** Headers of the page

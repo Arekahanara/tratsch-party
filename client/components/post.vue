@@ -1,7 +1,6 @@
 <template>
   <div>
     <pre>{{post}}</pre>
-    <p>{{post.content}}</p>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="post in posts" :key="post._id">
+    <div v-for="post in posts.data" :key="post._id">
       <post :post="post"/>
     </div>
   </div>

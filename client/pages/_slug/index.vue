@@ -10,37 +10,22 @@
   import { mapGetters } from 'vuex'
   import timeline from '../../components/timeline'
 
-  const queryChannelBySlug = slug => ({
-    query: { slug }
-  })
-
-  const queryPostByChannelId = channelId => ({
-    query: { channelId }
-  })
-
   export default {
     async fetch ({ store, params }) {
-      const { slug } = params
-      const channels = await store.dispatch('channel/find', queryChannelBySlug(slug))
-      const currentChannel = channels.data[0]._id
-      await store.dispatch('post/find', queryPostByChannelId(currentChannel))
+      await store.dispatch('post/findByChannelId', store.getters['channel/current'])
     },
     components: {
       timeline
     },
     computed: {
       ...mapGetters('channel', {
-        channelFind: 'find'
+        channel: 'current'
       }),
       ...mapGetters('post', {
-        postFind: 'find'
+        findByChannelId: 'findByChannelId'
       }),
-      channel () {
-        let { slug } = this.$route.params
-        return this.channelFind(queryChannelBySlug(slug)).data[0]
-      },
       posts () {
-        return this.postFind(queryPostByChannelId(this.channel._id)).data
+        return this.findByChannelId(this.channel._id)
       }
     }
   }

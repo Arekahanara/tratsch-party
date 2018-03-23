@@ -30,8 +30,26 @@ export default function () {
       }
     },
     plugins: [
-      service('channel'),
-      service('post'),
+      service('channel', {
+        actions: {
+          async getBySlug ({ dispatch }, slug) {
+            const channels = await dispatch('find', { query: { slug } })
+            return dispatch('get', channels.data[0]._id)
+          }
+        }
+      }),
+      service('post', {
+        actions: {
+          findByChannelId ({ dispatch }, channelId) {
+            return dispatch('find', { query: { channelId } })
+          }
+        },
+        getters: {
+          findByChannelId (state, { find }) {
+            return (channelId) => find({ query: { channelId } })
+          }
+        }
+      }),
       service('user'),
       auth({
         userService: 'user',
