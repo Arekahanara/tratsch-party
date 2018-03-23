@@ -42,5 +42,5 @@
       "secure": false
     }
   },
-  "mongodb": "mongodb://localhost:27017/feathers_chat_nuxt"
+  "mongodb": "mongodb://localhost:27017/discuss"
 }

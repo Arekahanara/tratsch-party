@@ -30,20 +30,20 @@ export default function () {
       }
     },
     plugins: [
-      service('message'),
+      service('channel'),
+      service('post'),
       service('user'),
       auth({
         userService: 'user',
         state: {
           publicPages: [
             'login',
-            'signup',
+            'register',
             'index'
           ],
           fobiddenPagesOnAuth: [
             'login',
-            'signup',
-            'index'
+            'register'
           ]
         }
       })
