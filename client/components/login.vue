@@ -2,10 +2,10 @@
   <section class="login d-flex align-items-center">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-sm-6">
+        <div class="col-md-6">
           <form>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email or username</label>
+              <label for="exampleInputEmail1">Email</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter here">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
@@ -15,7 +15,7 @@
             </div>
           </form>
           <div class="login-box">
-            <a href="#" class="btn btn-block btn-light">Register</a>
+            <nuxt-link to="/register" class="btn btn-block btn-light">Register</nuxt-link>
             <a href="#" class="btn btn-block btn-dark">Login</a>
           </div>
         </div>

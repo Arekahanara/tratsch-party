@@ -1,1 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
+
+.btn-fb {
+  color: #fff;
+  background-color: #3B5998;
+  border-color: #3B5998; 
+  &:hover {
+    color: #fff;
+  }
+}
