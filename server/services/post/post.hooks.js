@@ -1,33 +1,52 @@
 const { authenticate } = require('@feathersjs/authentication').hooks
+const { fastJoin } = require('feathers-hooks-common')
 
-module.exports = {
-  before: {
-    all: [],
-    find: [],
-    get: [],
-    create: [ authenticate('jwt') ],
-    update: [ authenticate('jwt') ],
-    patch: [ authenticate('jwt') ],
-    remove: [ authenticate('jwt') ]
-  },
+module.exports = function (app) {
+  const userService = app.service('user')
 
-  after: {
-    all: [],
-    find: [],
-    get: [],
-    create: [],
-    update: [],
-    patch: [],
-    remove: []
-  },
+  const postResolvers = {
+    joins: {
+      user: (...args) => async post => {
+        post.user = (await userService.find({
+          query: {
+            _id: post.userId
+          },
+          paginate: false
+        }))[0]
+        return post
+      }
+    }
+  }
 
-  error: {
-    all: [],
-    find: [],
-    get: [],
-    create: [],
-    update: [],
-    patch: [],
-    remove: []
+  return {
+    before: {
+      all: [],
+      find: [],
+      get: [],
+      create: [ authenticate('jwt') ],
+      update: [ authenticate('jwt') ],
+      patch: [ authenticate('jwt') ],
+      remove: [ authenticate('jwt') ]
+    },
+
+    after: {
+      all: [ fastJoin(postResolvers) ],
+      find: [],
+      get: [],
+      create: [],
+      update: [],
+      patch: [],
+      remove: []
+    },
+
+    error: {
+      all: [],
+      find: [],
+      get: [],
+      create: [],
+      update: [],
+      patch: [],
+      remove: []
+    }
   }
 }

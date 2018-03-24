@@ -19,5 +19,5 @@ module.exports = function (app) {
   // Get our initialized service so that we can register hooks and filters
   const service = app.service('post')
 
-  service.hooks(hooks)
+  service.hooks(hooks(app))
 }
