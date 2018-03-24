@@ -17,7 +17,7 @@
       </header>
       <div class="row">
         <div class="col">
-          <div class="media-box">
+          <div class="media-box" v-if="post.type == 'IMAGE'">
             <img src="http://via.placeholder.com/600x500">
           </div>
         </div>
@@ -25,7 +25,7 @@
       <div class="row text">
         <div class="col">
           <div class="text-box">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, saepe amet aliquam consectetur quasi, animi ipsum repellendus repudiandae laudantium, consequatur nesciunt sequi modi impedit possimus dicta asperiores dolorem expedita quia.</p>
+            <p>{{post.content}}</p>
           </div>
         </div>
       </div>
