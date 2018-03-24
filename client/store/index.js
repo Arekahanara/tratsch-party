@@ -42,12 +42,12 @@ export default function () {
       service('post', {
         actions: {
           findByChannelId ({ dispatch }, channelId) {
-            return dispatch('find', { query: { channelId } })
+            return dispatch('find', { query: { channelId, $sort: { createdAt: -1 } } })
           }
         },
         getters: {
           findByChannelId (state, { find }) {
-            return (channelId) => find({ query: { channelId } })
+            return (channelId) => find({ query: { channelId, $sort: { createdAt: -1 } } })
           }
         }
       }),
