@@ -2,17 +2,24 @@ const { authenticate } = require('@feathersjs/authentication').hooks
 const { fastJoin } = require('feathers-hooks-common')
 
 module.exports = function (app) {
-  const userService = app.service('user')
-
   const postResolvers = {
     joins: {
       user: (...args) => async post => {
-        post.user = (await userService.find({
+        post.user = (await app.service('user').find({
           query: {
             _id: post.userId
           },
           paginate: false
         }))[0]
+        return post
+      },
+      medias: (...args) => async post => {
+        post.medias = (await app.service('media').find({
+          query: {
+            postId: post._id
+          },
+          paginate: false
+        }))
         return post
       }
     }

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <input v-model="content" @keyup.enter="onSubmit" class="form-control"/>
+    <vue-dropzone ref="postDropzone" id="dropzone" @vdropzone-success="addFileToPost" :options="dropzoneOptions"/>
+    <input v-model="post.content" @keyup.enter="onSubmit" class="form-control"/>
+    <hr class="my-3">
   </div>
 </template>
 
@@ -10,13 +12,26 @@
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
+  import vue2Dropzone from 'vue2-dropzone'
+  import 'vue2-dropzone/dist/vue2Dropzone.css'
 
   export default {
     name: 'post-composer',
+    components: {
+      vueDropzone: vue2Dropzone
+    },
     data () {
       return {
-        content: undefined,
-        result: undefined
+        post: {
+          content: undefined,
+          mediaIds: []
+        },
+        result: undefined,
+        dropzoneOptions: {
+          maxFilesize: 15,
+          autoProcessQueue: true,
+          url: '/api/upload'
+        }
       }
     },
     computed: {
@@ -31,13 +46,32 @@
       ...mapActions('post', {
         createPost: 'create'
       }),
+      addFileToPost (file, response) {
+        this.post.mediaIds.push(...response.map(item => item._id))
+      },
+      async uploadFiles () {
+        await this.$refs.postDropzone.processQueue()
+      },
       async onSubmit () {
-        const { content } = this
-        await this.createPost({
-          content,
+        await this.uploadFiles()
+        const post = await this.createPost({
+          ...this.post,
           channelId: this.channel._id,
           userId: this.user._id
         })
+
+        for (let mediaId of this.post.mediaIds) {
+          await this.$store.dispatch('media/patch', [mediaId, { postId: post._id }])
+        }
+
+        this.$store.dispatch('post/get', post._id)
+
+        this.post = {
+          content: undefined,
+          mediaIds: []
+        }
+
+        this.$refs.postDropzone.removeAllFiles()
       }
     }
   }

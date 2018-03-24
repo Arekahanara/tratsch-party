@@ -9,6 +9,8 @@ const category = require('./category/category.service.js')
 
 const reaction = require('./reaction/reaction.service.js')
 
+const media = require('./media/media.service.js');
+
 module.exports = function (app) {
   app.configure(channel)
   app.configure(user)
@@ -16,4 +18,5 @@ module.exports = function (app) {
   app.configure(comment)
   app.configure(category)
   app.configure(reaction)
+  app.configure(media);
 }

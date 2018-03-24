@@ -51,6 +51,7 @@ export default function () {
           }
         }
       }),
+      service('media'),
       service('user'),
       auth({
         userService: 'user',

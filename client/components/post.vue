@@ -17,8 +17,8 @@
       </header>
       <div class="row">
         <div class="col">
-          <div class="media-box" v-if="post.type == 'IMAGE'">
-            <img src="http://via.placeholder.com/600x500">
+          <div class="media-box" v-if="post.medias[0]">
+            <img :src="post.medias[0].url">
           </div>
         </div>
       </div>
