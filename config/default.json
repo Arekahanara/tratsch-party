@@ -8,7 +8,7 @@
   },
   "nedb": "../data",
   "authentication": {
-    "secret": "2444a941c9facd89bebd919af7cd4fd3e3aff132e86e6241331dbe03c8fc0b237ecfb2bc741aa53529a2961a4eb2241337203e04cab6c0341866e4da27b381f059c64e8fc77fb8858d8cf49d3b398eb0b9707f33914c045c469ecd488ac28e47965bd3cae40022c75d5dea747df5ed9c2c7eec74485ceda1017db8d8a77566e74c49367a51078a497134ab1ac1b0fb5619f6db20968fe48c1c4f7600012f3a3897875605cf7a59c5ff4e6ec0056e41684070bdf1c9095f1745fab95b2dd647719a2be6a5d5cad68237de9d219298281314f168cdfc11fc9613faec82d6754781ef7f3b357ed2e8cc509d9c65a38531324262f86da9371fcc365edad005c580d7",
+    "secret": "86713c8a84cbce9214a5911899d344fb767214b2523325df8f25cf66bad10b250c1b02d4a651ab2e85218be83c04beab617559107d724e2171e61922edb0141e4f97d4031e936261c2abd718dfb4c3cbdcc8e23be7ff976fab915fa23c156ca11ee54abaf7db4ccc5911d78e88dbaf5396a1869c741a29af494942b4d0efbfadca5ff03945abf6cd01f3e5a7bf87a89e97d37f22f140b8041ae31161753246cb56abd09cbf89c45ff66ecd4322bbcf1890ab560768c7acd820be7f8de2605f435460ccd7136fe0ca9c4f24deeb56d5acfd462117b0a68a56d04ddbe440d16a13112b662f9b65c5007025d1c80721ed5c67669b2211e4ee3cfd642c39c892a863",
     "strategies": [
       "jwt",
       "local"
@@ -30,10 +30,26 @@
       "usernameField": "email",
       "passwordField": "password"
     },
-    "github": {
-      "clientID": "your github client id",
-      "clientSecret": "your github client secret",
-      "successRedirect": "/"
+    "facebook": {
+      "clientID": "your facebook client id",
+      "clientSecret": "your facebook client secret",
+      "successRedirect": "/",
+      "scope": [
+        "public_profile",
+        "email"
+      ],
+      "profileFields": [
+        "id",
+        "displayName",
+        "first_name",
+        "last_name",
+        "email",
+        "gender",
+        "profileUrl",
+        "birthday",
+        "picture",
+        "permissions"
+      ]
     },
     "cookie": {
       "enabled": true,

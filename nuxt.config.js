@@ -3,7 +3,7 @@ const BabiliPlugin = require('babili-webpack-plugin')
 module.exports = {
   srcDir: 'client/',
   router: {
-    middleware: ['auth','resolveChannel']
+    middleware: ['auth', 'resolveChannel']
   },
   plugins: [
     { src: '~/plugins/nuxt-client-init.js', ssr: false },
