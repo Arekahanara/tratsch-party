@@ -3,11 +3,12 @@ import socketio from '@feathersjs/socketio-client'
 import auth from '@feathersjs/authentication-client'
 import io from 'socket.io-client'
 import { CookieStorage } from 'cookie-storage'
-
-const socket = io('http://localhost:3000', {transports: ['websocket']})
-
+let socket
 if (!process.browser) {
   CookieStorage.prototype._setCookie = function () {}
+  socket = io('http://localhost:3000', {transports: ['websocket']})
+} else {
+  socket = io('', {transports: ['websocket']})
 }
 
 const feathersClient = feathers()
