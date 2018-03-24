@@ -1,30 +1,28 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Fixed navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse show" id="navbarCollapse" style="">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-3">
+          <a href="#">[x]</a>
+        </div>
+        <div class="col-6 text-center">
+          <div class="brand">
+            <a href="#">Test-Channel</a>
+          </div>
+        </div>
+        <div class="col-3">
+          <a href="#">[x]</a>
+        </div>
       </div>
     </div>
   </nav>
 </template>
 
 <style lang="scss" scoped>
-  p {
-    color: red;
+  nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ced4da;
+    height: 50px;
   }
 </style>
 

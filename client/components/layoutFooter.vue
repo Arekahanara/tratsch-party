@@ -1,15 +1,14 @@
 <template>
-  <footer class="bg-dark">
+  <footer>
     <div class="container">
       <div class="row">
-        <div class="col-1"></div>
-        <div class="col-10">
+        <div class="col-8">
           <form>
             <input class="form-control" placeholder="Search" aria-label="Search" type="text">
             <button class="btn" type="submit">Search</button>
           </form>
         </div>
-        <div class="col-1"></div>
+        <div class="col-4"></div>
       </div>
     </div>
   </footer>
@@ -21,7 +20,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #ced4da;
+    background-color: #fff;
+    border-top: 1px solid #ced4da;
 
     form {
       position: relative;
@@ -34,7 +34,7 @@
 
       .btn {
         position: absolute;
-        right: -1px;
+        right: 1px;
         top: 50%;
         transform: translate(0,-50%);
         padding: 5px 10px;

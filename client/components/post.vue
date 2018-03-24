@@ -37,6 +37,7 @@
   article {
     border: 1px solid #ced4da;
     margin-bottom: 25px;
+    background-color: #fff;
 
     header {
       padding: 15px;

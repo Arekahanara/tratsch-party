@@ -1,7 +1,5 @@
 <template>
   <div>
-    <pre>{{channel}}</pre>
-    <hr>
     <timeline :posts="posts" v-if="posts"/>
     <p v-else>No Posts found</p>
   </div>

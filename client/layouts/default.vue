@@ -17,6 +17,13 @@
   </div>
 </template>
 
+<style lang="scss" scoped>
+  main {
+    padding: 75px 0;
+    background-color: #fafafa;
+  }
+</style>
+
 <script>
   import layoutHeader from '../components/layoutHeader.vue'
   import layoutSidebar from '../components/layoutSidebar.vue'

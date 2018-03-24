@@ -1,12 +1,26 @@
 <template>
   <div class="sidebar">
-    <p>Sidebar gibbet hier</p>
+    <ul>
+      <li>
+        <a href="#">Test</a>
+      </li>
+      <li>
+        <a href="#">Test</a>
+      </li>
+      <li>
+        <a href="#">Test</a>
+      </li>
+      <li>
+        <a href="#">Test</a>
+      </li>
+    </ul>
   </div>
 </template>
 
 <style lang="scss" scoped>
   .sidebar {
     border: 1px solid #ced4da;
+    background-color: #fff;
   }
 </style>
 
