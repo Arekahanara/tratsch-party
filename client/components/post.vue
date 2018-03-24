@@ -10,7 +10,7 @@
           </div>
           <div class="col-11">
             <div class="user-name">
-              <h5>@Username</h5>
+              <h5>@{{post.user.username}}</h5>
             </div>
           </div>
         </div>
