@@ -5,6 +5,6 @@ export default async function (context) {
   //  return redirect('/login')
   // }
   if (auth.fobiddenPagesOnAuth.includes(route.name) && auth.payload) {
-    return redirect('/chat')
+    return redirect('/')
   }
 }
