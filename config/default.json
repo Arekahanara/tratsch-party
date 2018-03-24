@@ -58,5 +58,10 @@
       "secure": false
     }
   },
+  "aws": {
+    "accessKeyId": "AKIAIX2TX6CWBTARETXA",
+    "secretAccessKey": "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",
+    "Bucket": "discuss-media"
+  },
   "mongodb": "mongodb://localhost:27017/discuss"
 }
