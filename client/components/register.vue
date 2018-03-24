@@ -1,5 +1,5 @@
 <template>
-  <section class="register d-flex align-items-center">
+  <section class="register">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-6">
@@ -61,6 +61,7 @@
 <style lang="scss" scoped>
   .register {
     height: 100vh;
+    padding: 25px 0;
   }
   .text-divider {
     margin-bottom: 10px;
