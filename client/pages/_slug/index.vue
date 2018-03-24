@@ -2,7 +2,8 @@
   <div>
     <pre>{{channel}}</pre>
     <hr>
-    <timeline :posts="posts"/>
+    <timeline :posts="posts" v-if="posts"/>
+    <p v-else>No Posts found</p>
   </div>
 </template>
 
@@ -25,7 +26,7 @@
         findByChannelId: 'findByChannelId'
       }),
       posts () {
-        return this.findByChannelId(this.channel._id)
+        return this.channel ? this.findByChannelId(this.channel._id) : null
       }
     }
   }

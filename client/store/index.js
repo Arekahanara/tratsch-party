@@ -34,6 +34,7 @@ export default function () {
         actions: {
           async getBySlug ({ dispatch }, slug) {
             const channels = await dispatch('find', { query: { slug } })
+            if (!channels.data[0]) return
             return dispatch('get', channels.data[0]._id)
           }
         }
