@@ -16,7 +16,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form @submit="onSubmit">
+          <form @submit.prevent="onSubmit">
             <div class="form-group">
               <label for="exampleInputEmail1">Email</label>
               <input type="email" class="form-control" id="exampleInputEmail1" v-model="email" aria-describedby="emailHelp" placeholder="Enter here">
