@@ -41,7 +41,7 @@
         <a href="#">Help</a>
       </li>
       <li>
-        <a href="#">Logout</a>
+        <a @click="logoutRedirect">Logout</a>
       </li>
     </ul>
   </div>
@@ -70,7 +70,15 @@
 </style>
 
 <script>
+  import { mapActions } from 'vuex'
+
   export default {
-    name: 'layout-sidebar'
+    name: 'layout-sidebar',
+    methods: {
+      ...mapActions('auth', ['logout']),
+      logoutRedirect() {
+        this.logout().then(() => this.$router.push('/login'))
+      }
+    }
   }
 </script>
