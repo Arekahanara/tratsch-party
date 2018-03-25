@@ -1,12 +1,27 @@
 <template>
-  <main class="home">
-   test hier bin ich <i class="fa fa-bath" aria-hidden="true"></i>
-  </main>
+  <div>
+    <timeline :posts="posts" v-if="posts"/>
+    <p v-else>No Posts found</p>
+  </div>
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
+  import timeline from '../components/timeline'
+
   export default {
-    name: 'home'
+    name: 'home',
+    async fetch ({ store, params }) {
+      await store.dispatch('post/findByChannelSubscribed')
+    },
+    components: {
+      timeline
+    },
+    computed: {
+      ...mapGetters('post', {
+        posts: 'findByChannelSubscribed'
+      })
+    }
   }
 </script>
 
