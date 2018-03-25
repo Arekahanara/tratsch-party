@@ -15,6 +15,17 @@
     border-radius: 0;
   }
 
+  .dropzone {
+    position: relative;
+    .dz-message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      margin: 0;
+    }
+  }
+
   textarea {
     border-radius: 0;
     border: 1px solid $lgrey;
