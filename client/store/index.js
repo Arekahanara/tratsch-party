@@ -44,7 +44,7 @@ export default function () {
           findByChannelId ({ dispatch }, channelId) {
             return dispatch('find', { query: { channelId, $sort: { createdAt: -1 } } })
           },
-          findByChannelSubscribed ({ dispatch }) {
+          findByChannelSubscribed ({ dispatch, commit }) {
             return dispatch('find', { query: { $sort: { createdAt: -1 } } })
           }
         },

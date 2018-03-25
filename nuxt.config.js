@@ -8,7 +8,8 @@ module.exports = {
   plugins: [
     { src: '~/plugins/nuxt-client-init.js', ssr: false },
     { src: '~/plugins/moment.js' },
-    { src: '~/plugins/vuex-router-sync.js' }
+    { src: '~/plugins/vuex-router-sync.js' },
+    { src: '~/plugins/bootstrap.js' }
   ],
   /*
   ** Headers of the page
