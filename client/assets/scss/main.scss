@@ -16,6 +16,16 @@ body {
   }
 }
 
+.btn-lgrey {
+  color: #000;
+  background-color: $lgrey;
+  border-color: $lgrey; 
+  &:hover {
+    color: #000;
+    background-color: $grey;
+  } 
+}
+
 hr {
   border-color: $lgrey;
 }
@@ -27,4 +37,21 @@ input, input.form-control {
 
 .btn {
   border-radius: 0;
+}
+
+div.vue-dropzone {
+  border: 1px solid $lgrey;
+  border-bottom: 0;
+  border-radius: 0;
+}
+
+.dropzone {
+  position: relative;
+  div.dz-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+  }
 }

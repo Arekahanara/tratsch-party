@@ -2,6 +2,7 @@
   <div>
     <vue-dropzone ref="postDropzone" id="dropzone" @vdropzone-success="addFileToPost" :options="dropzoneOptions"/>
     <textarea v-model="post.content" class="form-control" placeholder="What's on your mind?"></textarea>
+    <button class="btn btn-block btn-lgrey" @click="onSubmit">Post</button>
     <hr class="my-3">
   </div>
 </template>
@@ -9,28 +10,13 @@
 <style lang="scss" scoped>
   @import "../assets/scss/variables";
 
-  .vue-dropzone {
-    border: 1px solid $lgrey;
-    border-bottom: 0;
-    border-radius: 0;
-  }
-
-  .dropzone {
-    position: relative;
-    .dz-message {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      margin: 0;
-    }
-  }
-
   textarea {
+    position: relative;
     border-radius: 0;
     border: 1px solid $lgrey;
     height: 135px;
     resize: none;
+    z-index: 1;
   }
 </style>
 
