@@ -12,7 +12,7 @@
         <div class="col-6">
           <div class="brand d-flex justify-content-center align-items-center">
             <span v-if="channel">{{channel.name}}</span>
-            <span v-else>Plauder.Party</span>
+            <span v-else>Tratsch.Party</span>
           </div>
         </div>
         <div class="col-3">
