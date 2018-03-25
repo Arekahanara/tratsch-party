@@ -12,6 +12,7 @@
   export default {
     name: 'home',
     async fetch ({ store, params }) {
+      store.commit('channel/setCurrent', null)
       await store.dispatch('post/findByChannelSubscribed')
     },
     components: {

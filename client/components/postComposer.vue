@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="channel && user">
     <vue-dropzone ref="postDropzone" id="dropzone" @vdropzone-success="addFileToPost" :options="dropzoneOptions"/>
     <textarea v-model="post.content" class="form-control" placeholder="What's on your mind?"></textarea>
     <button class="btn btn-block btn-lgrey" @click="onSubmit">Post</button>
