@@ -32,8 +32,6 @@
       input {
         width: 100%;
         padding: 5px 80px 5px 10px;
-        border-color: $lgrey;
-        border-radius: 0;
         background-color: $lgrey;
       }
 

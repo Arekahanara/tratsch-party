@@ -1,7 +1,7 @@
 <template>
   <div>
     <vue-dropzone ref="postDropzone" id="dropzone" @vdropzone-success="addFileToPost" :options="dropzoneOptions"/>
-    <input v-model="post.content" @keyup.enter="onSubmit" class="form-control"/>
+    <textarea v-model="post.content" class="form-control" placeholder="What's on your mind?"></textarea>
     <hr class="my-3">
   </div>
 </template>
@@ -12,11 +12,14 @@
   .vue-dropzone {
     border: 1px solid $lgrey;
     border-bottom: 0;
+    border-radius: 0;
   }
 
-  input {
+  textarea {
     border-radius: 0;
     border: 1px solid $lgrey;
+    height: 135px;
+    resize: none;
   }
 </style>
 

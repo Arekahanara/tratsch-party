@@ -2,6 +2,10 @@
 /*@import '~font-awesome/scss/font-awesome';*/
 @import "variables";
 
+body {
+  background-color: $dwhite;
+}
+
 .btn-fb {
   color: #fff;
   background-color: #3B5998;
@@ -13,4 +17,13 @@
 
 hr {
   border-color: $lgrey;
+}
+
+input, input.form-control {
+    border: 1px solid $lgrey;
+    border-radius: 0;
+}
+
+.btn {
+  border-radius: 0;
 }

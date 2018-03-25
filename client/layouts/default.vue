@@ -22,7 +22,6 @@
 
   main {
     padding: 75px 0;
-    background-color: $dwhite;
   }
 </style>
 
