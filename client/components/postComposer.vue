@@ -7,6 +7,17 @@
 </template>
 
 <style lang="scss" scoped>
+  @import "../assets/scss/variables";
+
+  .vue-dropzone {
+    border: 1px solid $lgrey;
+    border-bottom: 0;
+  }
+
+  input {
+    border-radius: 0;
+    border: 1px solid $lgrey;
+  }
 </style>
 
 

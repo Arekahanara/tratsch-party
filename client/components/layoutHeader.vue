@@ -1,17 +1,21 @@
 <template>
   <nav class="fixed-top">
     <div class="container">
-      <div class="row justify-content-center align-items-center">
+      <div class="row align-items-center">
         <div class="col-3">
-          <a href="#">[x]</a>
+          <div class="left-nav">
+            <a href="#">[x]</a>
+          </div>
         </div>
-        <div class="col-6 text-center">
-          <div class="brand">
+        <div class="col-6">
+          <div class="brand d-flex justify-content-center align-items-center">
             <a href="#">Test-Channel</a>
           </div>
         </div>
         <div class="col-3">
-          <a href="#">[x]</a>
+          <div class="right-nav">
+            <a href="#">[x]</a>
+          </div>
         </div>
       </div>
     </div>
@@ -19,10 +23,27 @@
 </template>
 
 <style lang="scss" scoped>
+  @import "../assets/scss/variables";
+
   nav {
     background-color: #fff;
-    border-bottom: 1px solid #ced4da;
-    height: 50px;
+    border-bottom: 1px solid $lgrey;
+
+    a {
+      color: #000;
+    }
+
+    .brand {
+      height: 50px;
+
+      img {
+        height: 40px;
+      }
+    }
+
+    .right-nav {
+      text-align: right;
+    }
   }
 </style>
 

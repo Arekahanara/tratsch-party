@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col-8">
           <form>
-            <input class="form-control" placeholder="Search" aria-label="Search" type="text">
-            <button class="btn" type="submit">Search</button>
+            <input class="form-control" placeholder="Search..." aria-label="Search" type="text">
+            <button type="submit">Search</button>
           </form>
         </div>
         <div class="col-4"></div>
@@ -15,13 +15,15 @@
 </template>
 
 <style lang="scss" scoped>
+  @import "../assets/scss/variables";
+
   footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #fff;
-    border-top: 1px solid #ced4da;
+    border-top: 1px solid $lgrey;
 
     form {
       position: relative;
@@ -30,9 +32,12 @@
       input {
         width: 100%;
         padding: 5px 80px 5px 10px;
+        border-color: $lgrey;
+        border-radius: 0;
+        background-color: $lgrey;
       }
 
-      .btn {
+      button {
         position: absolute;
         right: 1px;
         top: 50%;
@@ -41,6 +46,7 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border: 0;
+        background-color: $lgrey;
       }
     }
   }

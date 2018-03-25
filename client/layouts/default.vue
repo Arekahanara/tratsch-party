@@ -18,9 +18,11 @@
 </template>
 
 <style lang="scss" scoped>
+  @import "../assets/scss/variables";
+
   main {
     padding: 75px 0;
-    background-color: #fafafa;
+    background-color: $dwhite;
   }
 </style>
 

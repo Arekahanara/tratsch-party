@@ -59,6 +59,8 @@
 </template>
 
 <style lang="scss" scoped>
+  @import "../assets/scss/variables";
+
   .register {
     height: 100vh;
     padding: 25px 0;

@@ -34,8 +34,10 @@
 </template>
 
 <style lang="scss" scoped>
+  @import "../assets/scss/variables";
+
   article {
-    border: 1px solid #ced4da;
+    border: 1px solid $lgrey;
     margin-bottom: 25px;
     background-color: #fff;
 
