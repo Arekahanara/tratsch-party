@@ -76,7 +76,7 @@
     name: 'layout-sidebar',
     methods: {
       ...mapActions('auth', ['logout']),
-      logoutRedirect() {
+      logoutRedirect () {
         this.logout().then(() => this.$router.push('/login'))
       }
     }
