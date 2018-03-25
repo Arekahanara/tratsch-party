@@ -43,11 +43,17 @@ export default function () {
         actions: {
           findByChannelId ({ dispatch }, channelId) {
             return dispatch('find', { query: { channelId, $sort: { createdAt: -1 } } })
+          },
+          findByChannelSubscribed ({ dispatch }) {
+            return dispatch('find', { query: { $sort: { createdAt: -1 } } })
           }
         },
         getters: {
           findByChannelId (state, { find }) {
             return (channelId) => find({ query: { channelId, $sort: { createdAt: -1 } } })
+          },
+          findByChannelSubscribed (state, { find }) {
+            return find({ query: { $sort: { createdAt: -1 } } })
           }
         }
       }),

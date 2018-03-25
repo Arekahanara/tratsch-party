@@ -10,7 +10,7 @@
           </div>
           <div class="col-11">
             <div class="user-name">
-              <h5>@{{post.user.username}}</h5>
+              <h5>@<span v-if="post.user">{{post.user.username}}</span><span v-else>Uknown</span></h5>
             </div>
           </div>
         </div>
