@@ -4,7 +4,9 @@
       <div class="row align-items-center">
         <div class="col-3">
           <div class="left-nav">
-            <a href="#">[x]</a>
+            <a href="#">
+              <i class="fa fa-home" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
         <div class="col-6">
@@ -14,7 +16,9 @@
         </div>
         <div class="col-3">
           <div class="right-nav">
-            <a href="#">[x]</a>
+            <a href="#">
+              <i class="fa fa-bell" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
