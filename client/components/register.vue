@@ -48,7 +48,7 @@
             </div>
             <div class="login-box">
               <p>By signing up, you agree to our Terms & Privacy Policy.</p>
-              <nuxt-link to="/login" class="btn btn-block btn-light">Login</nuxt-link>
+              <nuxt-link to="/login" class="btn btn-block btn-lgrey">Login</nuxt-link>
               <button type="submit" class="btn btn-block btn-dark">Sign up</button>
             </div>
           </form>

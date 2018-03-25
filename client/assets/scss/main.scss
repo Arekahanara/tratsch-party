@@ -23,11 +23,17 @@ body {
   &:hover {
     color: #000;
     background-color: $grey;
+    border-color: $grey; 
   } 
 }
 
 hr {
   border-color: $lgrey;
+}
+
+.fa {
+  width: 20px;
+  text-align: center;
 }
 
 input, input.form-control {

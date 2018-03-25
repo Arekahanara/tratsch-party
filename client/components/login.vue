@@ -20,7 +20,7 @@
               <input type="password" class="form-control" v-model="password" id="exampleInputPassword1" placeholder="...">
             </div>
             <div class="login-box">
-              <nuxt-link to="/register" class="btn btn-block btn-light">Register</nuxt-link>
+              <nuxt-link to="/register" class="btn btn-block btn-lgrey">Register</nuxt-link>
               <button type="submit" class="btn btn-block btn-dark">Login</button>
             </div>
           </form>

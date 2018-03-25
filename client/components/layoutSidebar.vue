@@ -17,31 +17,31 @@
     <hr>
     <ul>
       <li>
-        <a href="#">Photos</a>
+        <a href="#"><i class="fa fa-camera" aria-hidden="true"></i> Photos</a>
       </li>
       <li>
-        <a href="#">Videos</a>
+        <a href="#"><i class="fa fa-video-camera" aria-hidden="true"></i> Videos</a>
       </li>
       <li>
-        <a href="#">Files</a>
+        <a href="#"><i class="fa fa-file-text" aria-hidden="true"></i> Files</a>
       </li>
       <li>
-        <a href="#">Maps</a>
+        <a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Maps</a>
       </li>
     </ul>
     <hr>
     <ul>
       <li>
-        <a href="#">Settings</a>
+        <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
       </li>
       <li>
-        <a href="#">Privacy</a>
+        <a href="#"><i class="fa fa-lock" aria-hidden="true"></i> Privacy</a>
       </li>
       <li>
-        <a href="#">Help</a>
+        <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a>
       </li>
       <li>
-        <a @click="logoutRedirect">Logout</a>
+        <a @click="logoutRedirect"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
       </li>
     </ul>
   </div>

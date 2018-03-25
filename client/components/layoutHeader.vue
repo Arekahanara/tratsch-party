@@ -20,7 +20,7 @@
               </b-dropdown>
             </span>
             <span v-else>
-              <b-dropdown id="ddown1" text="Plauder.Party" class="m-md-2" v-if="channels">
+              <b-dropdown id="ddown1" text="Tratsch.Party" class="m-md-2" v-if="channels">
                 <b-dropdown-header>Channels</b-dropdown-header>
                 <b-dropdown-item v-for="item in channels" :key="item._id" :to="{ name: 'slug', params: { slug: item.slug }}">{{item.name}}</b-dropdown-item>
               </b-dropdown>
