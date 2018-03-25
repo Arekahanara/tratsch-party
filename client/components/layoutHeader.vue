@@ -11,7 +11,8 @@
         </div>
         <div class="col-6">
           <div class="brand d-flex justify-content-center align-items-center">
-            <a href="#">Test-Channel</a>
+            <span v-if="channel">{{channel.name}}</span>
+            <span v-else>Plauder.Party</span>
           </div>
         </div>
         <div class="col-3">
@@ -52,7 +53,14 @@
 </style>
 
 <script>
+  import { mapGetters } from 'vuex'
+
   export default {
-    name: 'layout-header'
+    name: 'layout-header',
+    computed: {
+      ...mapGetters('channel', {
+        channel: 'current'
+      })
+    }
   }
 </script>
