@@ -14,6 +14,7 @@
     async fetch ({ store, params }) {
       store.commit('channel/setCurrent', null)
       await store.dispatch('post/findByChannelSubscribed')
+      await store.dispatch('channel/find')
     },
     components: {
       timeline
