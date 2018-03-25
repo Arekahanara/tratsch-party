@@ -4,9 +4,7 @@
       <div class="row align-items-center">
         <div class="col-3">
           <div class="left-nav">
-            <a href="#">
-              <i class="fa fa-home" aria-hidden="true"></i>
-            </a>
+            <nuxt-link to="/"><i class="fa fa-home" aria-hidden="true"></i></nuxt-link>
           </div>
         </div>
         <div class="col-6">

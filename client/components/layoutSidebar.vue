@@ -2,16 +2,16 @@
   <div class="sidebar">
     <ul>
       <li>
-        <a href="#">#HelloWorld</a>
+        <a href="#"><i class="fa fa-hashtag" aria-hidden="true"></i> HelloWorld</a>
       </li>
       <li>
-        <a href="#">#DeineMama</a>
+        <a href="#"><i class="fa fa-hashtag" aria-hidden="true"></i> DeineMama</a>
       </li>
       <li>
-        <a href="#">#NewZealand</a>
+        <a href="#"><i class="fa fa-hashtag" aria-hidden="true"></i> NewZealand</a>
       </li>
       <li>
-        <a href="#">#ClickHere</a>
+        <a href="#"><i class="fa fa-hashtag" aria-hidden="true"></i> ClickHere</a>
       </li>
     </ul>
     <hr>

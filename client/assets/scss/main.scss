@@ -5,6 +5,11 @@ $fa-font-path: "~font-awesome/fonts";
 
 body {
   background-color: $dwhite;
+  overflow-y: auto; 
+}
+
+a {
+  cursor: pointer;
 }
 
 .btn-fb {
