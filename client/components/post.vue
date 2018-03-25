@@ -38,7 +38,7 @@
 
   article {
     border: 1px solid $lgrey;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     background-color: #fff;
 
     header {
