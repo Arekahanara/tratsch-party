@@ -28,6 +28,9 @@
       <li>
         <a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Maps</a>
       </li>
+      <li>
+        <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a>
+      </li>
     </ul>
     <hr>
     <ul>

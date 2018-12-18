@@ -12,6 +12,10 @@ a {
   cursor: pointer;
 }
 
+.btn {
+  border-radius: 0;
+}
+
 .btn-fb {
   color: #fff;
   background-color: #3B5998;
@@ -32,6 +36,17 @@ a {
   } 
 }
 
+.btn-black {
+  color: #fff;
+  background-color: #000;
+  border-color: #000; 
+  &:hover {
+    color: #fff;
+    background-color: $dgrey;
+    border-color: $dgrey; 
+  } 
+}
+
 hr {
   border-color: $lgrey;
 }
@@ -44,10 +59,6 @@ hr {
 input, input.form-control {
     border: 1px solid $lgrey;
     border-radius: 0;
-}
-
-.btn {
-  border-radius: 0;
 }
 
 div.vue-dropzone {

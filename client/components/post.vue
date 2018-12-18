@@ -29,6 +29,14 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <div class="comments">
+            <div class="first-level"></div>
+            <div class="second-level"></div>
+          </div>
+        </div>
+      </div>
     </article>
   </div>
 </template>
