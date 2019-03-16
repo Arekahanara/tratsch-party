@@ -9,6 +9,7 @@
 
 <style lang="scss" scoped>
   @import "../assets/scss/variables";
+  @import "../../node_modules/vue2-dropzone/dist/vue2Dropzone.min.css";
 
   textarea {
     position: relative;
@@ -23,7 +24,6 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import vue2Dropzone from 'vue2-dropzone'
-// import 'vue2-dropzone/dist/vue2Dropzone.css'
 
 export default {
   name: 'post-composer',
