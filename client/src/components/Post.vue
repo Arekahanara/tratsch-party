@@ -8,10 +8,16 @@
               <img src="http://via.placeholder.com/300x300">
             </div>
           </div>
-          <div class="col-11">
-            <div class="user-name">
-              <h5>@<span v-if="post.user">{{post.user.username}}</span><span v-else>Uknown</span></h5>
-            </div>
+          <div class="col-10">
+              <h5 class="username">@<span v-if="post.user">{{post.user.username}}</span><span v-else>Unknown</span></h5>
+          </div>
+          <div class="col-1">
+              <b-dropdown id="ddown1" no-caret variant="link">
+                <template slot="button-content">
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </template>
+                <b-dropdown-item @click="post.remove()">Delete</b-dropdown-item>
+              </b-dropdown>
           </div>
         </div>
       </header>
@@ -65,6 +71,10 @@
 
     img {
       width: 100%;
+    }
+
+    .username {
+      margin-bottom: 0;
     }
   }
 </style>
