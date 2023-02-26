@@ -1,0 +1,21 @@
+{
+    "name": "tratsch.party",
+    "version": "1.0.0",
+    "description": "> Nuxt.js project",
+    "main": "index.js",
+    "scripts": {
+      "start": "docker-compose build && docker-compose up",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Arekahanara/tratsch.party.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Arekahanara/tratsch.party/issues"
+    },
+    "homepage": "https://github.com/Arekahanara/tratsch.party#readme"
+  }
+  
