@@ -1,4 +1,8 @@
-# feathers-chat-nuxt
+# Tratsch-Party
+
+Community project which includes a classic endless login, media upload, newsfeed and more.
+
+## feathers-chat-nuxt
 
 > Nuxt.js project
 
