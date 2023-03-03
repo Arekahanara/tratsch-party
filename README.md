@@ -1,6 +1,6 @@
 # Tratsch-Party
 
-Community project which includes a classic endless login, media upload, newsfeed and more.
+Community project which includes a classic endless login, media upload, newsfeed and more to create a platform where several users can easily exchange ideas with each other.
 
 ## feathers-chat-nuxt
 
