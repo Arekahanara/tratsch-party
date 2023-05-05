@@ -1,6 +1,6 @@
 # Tratsch-Party
 
-Tratsch-Party is one of my community projects, which is still work in progress. It includes a classic endless login, media upload, newsfeed and more to create a platform where several users can easily exchange ideas with each other.
+Tratsch-Party is one of my community projects, which is still work in progress. It includes a classic login, media upload, endless newsfeed and more to create a platform where several users can easily exchange ideas with each other.
 
 ## feathers-chat-nuxt
 
